@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧱 Glossy Block UI
+# 🧱 Stud UI Clean Roblox
 
 ### The AI agent skill that builds Roblox UI like a top-chart simulator
 
@@ -8,7 +8,7 @@ Chunky 3D stud buttons · glass streaks · extruded Heavy text · dark glass win
 
 [![Claude Skill](https://img.shields.io/badge/Claude-Agent%20Skill-D97757?style=for-the-badge)](SKILL.md)
 [![Roblox](https://img.shields.io/badge/Roblox-Studio-00A2FF?style=for-the-badge&logo=roblox&logoColor=white)](https://create.roblox.com)
-[![Luau](https://img.shields.io/badge/Luau-kit-2C2D72?style=for-the-badge&logo=lua&logoColor=white)](src/GlossyUI.luau)
+[![Luau](https://img.shields.io/badge/Luau-kit-2C2D72?style=for-the-badge&logo=lua&logoColor=white)](src/StudUI.luau)
 [![Icons](https://img.shields.io/badge/icons-1022-FFB61E?style=for-the-badge)](references/icon-catalog.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-43C22E?style=for-the-badge)](LICENSE)
 
@@ -24,7 +24,7 @@ Chunky 3D stud buttons · glass streaks · extruded Heavy text · dark glass win
 
 ## ✨ What is this?
 
-**Glossy Block UI** is a ready-to-use [Agent Skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview):
+**Stud UI Clean Roblox** is a ready-to-use [Agent Skill](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview):
 a folder an AI agent (Claude Code, Claude.ai, or any agent that can read files) loads to create Roblox interfaces in
 one precise, polished style. The style was **measured** on a real Roblox experience (17 ScreenGuis, ~7,700 UI instances,
 every color, stroke, gradient keypoint and tween timing) and then **rebuilt as a tested Luau component kit**.
@@ -34,8 +34,8 @@ it shipped with the game, instead of a generic flat menu.
 
 | The agent gets | So it can |
 |---|---|
-| 🧩 **`GlossyUI.luau`** component kit | build 3D buttons, windows, product cards, slots, panels, bars, badges in one call each |
-| 🎬 **`GlossyMotion.luau`** | wire hover / press, bouncy open & close with blur and FOV, idle animations, feedback, sounds |
+| 🧩 **`StudUI.luau`** component kit | build 3D buttons, windows, product cards, slots, panels, bars, badges in one call each |
+| 🎬 **`StudMotion.luau`** | wire hover / press, bouncy open & close with blur and FOV, idle animations, feedback, sounds |
 | 🖼️ **1022 icons** (`CheckUIIcons`) + catalog | pick real `rbxassetid`s instead of placeholders |
 | 🎨 **Design tokens** | use the exact palette, fonts, outlines, rarity colors, surfaces |
 | 📐 **Layouts & 7 screen archetypes** | compose HUDs, shops, calendars, season passes, collections, reward popups |
@@ -77,15 +77,15 @@ More captures and notes: [`assets/screenshots/`](assets/screenshots/README.md).
 <summary><b>Claude Code</b></summary>
 
 ```bash
-git clone https://github.com/TemporaryLooker22/glossy-block-ui ~/.claude/skills/glossy-block-ui
+git clone https://github.com/TemporaryLooker22/Stud-UI-Clean-Roblox ~/.claude/skills/stud-ui-clean-roblox
 ```
-Or put it in a project at `.claude/skills/glossy-block-ui`. Claude picks it up automatically when you ask for Roblox UI.
+Or put it in a project at `.claude/skills/stud-ui-clean-roblox`. Claude picks it up automatically when you ask for Roblox UI.
 </details>
 
 <details>
 <summary><b>Claude.ai / Claude Desktop</b></summary>
 
-Download `glossy-block-ui.skill` from the [latest release](../../releases/latest) and add it in
+Download `stud-ui-clean-roblox.skill` from the [latest release](../../releases/latest) and add it in
 **Settings → Capabilities → Skills** (or ask Claude to install it).
 </details>
 
@@ -111,7 +111,7 @@ Put the three modules of `src/` in **ReplicatedStorage** (copy-paste, or `rojo s
 
 ```lua
 local RS = game.ReplicatedStorage
-local UI, Icons = require(RS.GlossyUI), require(RS.CheckUIIcons)
+local UI, Icons = require(RS.StudUI), require(RS.CheckUIIcons)
 
 local gui = UI.ScreenGui("MenuShop", 11, { Parent = game.StarterGui })
 local win = UI.Window(gui, { Size = Vector2.new(662, 448), Title = "Pet Shop", Header = "pink",
@@ -128,7 +128,7 @@ blur, hover and sounds. Open it from anywhere with `PlayerGui.MenuShop.Basculer:
 
 ## 🧩 Kit API
 
-`local UI = require(ReplicatedStorage.GlossyUI)`
+`local UI = require(ReplicatedStorage.StudUI)`
 
 | Component | Call | Look |
 |---|---|---|
@@ -146,7 +146,7 @@ blur, hover and sounds. Open it from anywhere with `PlayerGui.MenuShop.Basculer:
 | Badges & text | `UI.RobuxBadge`, `UI.NotifBadge`, `UI.Text`, `UI.ShadowText`, `UI.MoneyText`, `UI.OutlinedIcon` | |
 | Helpers | `UI.Recolor`, `UI.SetButtonText`, `UI.SetDisabled`, `UI.Stripes`, `UI.Reflection` | |
 
-`local Motion = require(ReplicatedStorage.GlossyMotion)` (client)
+`local Motion = require(ReplicatedStorage.StudMotion)` (client)
 
 | Behaviour | Call |
 |---|---|
@@ -197,11 +197,11 @@ Everything else: [`references/design-tokens.md`](references/design-tokens.md).
 ## 📁 Repository structure
 
 ```
-glossy-block-ui/
+stud-ui-clean-roblox/
 ├── SKILL.md                      ← entry point for the agent (rules, workflow, API cheat-sheet)
 ├── src/
-│   ├── GlossyUI.luau             ← component kit + every design token
-│   ├── GlossyMotion.luau         ← motion, sounds, responsive scale, menu controller
+│   ├── StudUI.luau             ← component kit + every design token
+│   ├── StudMotion.luau         ← motion, sounds, responsive scale, menu controller
 │   └── CheckUIIcons.luau         ← 1022-icon registry (Get / Search)
 ├── references/
 │   ├── design-tokens.md          ← fonts, sizes, colors, themes, rarities, surfaces, strokes, z-index
@@ -218,9 +218,9 @@ glossy-block-ui/
 
 ## ✅ How it was validated
 
-- `GlossyUI` was loaded in Roblox Studio (byte-identical checksum) and examples 01–05 were generated and screenshotted
+- `StudUI` was loaded in Roblox Studio (byte-identical checksum) and examples 01–05 were generated and screenshotted
   next to the original UI — see the comparison at the top and captures 21–22.
-- `GlossyMotion` was run in Play mode on the client: opening a menu sets the blur to 18, FOV 70 → 78 and hides the other
+- `StudMotion` was run in Play mode on the client: opening a menu sets the blur to 18, FOV 70 → 78 and hides the other
   GUIs; closing restores everything. Sunburst spin, tab tint & slide, floating text, shake and the reward banner ran
   without errors.
 
@@ -270,8 +270,8 @@ Studio screenshot of the result next to the closest reference capture.
 
 ## 🇫🇷 En français
 
-**Glossy Block UI** est un skill pour agent IA (Claude Code, Claude.ai ou tout autre agent capable de lire un dossier).
-Il lui permet de créer des interfaces Roblox exactement dans le style « Glossy Block » des simulateurs à succès :
+**Stud UI Clean Roblox** est un skill pour agent IA (Claude Code, Claude.ai ou tout autre agent capable de lire un dossier).
+Il lui permet de créer des interfaces Roblox exactement dans le style « Stud UI » des simulateurs à succès :
 - boutons 3D à studs avec biseau et reflets de verre ;
 - textes Heavy contourés et extrudés ;
 - fenêtres en verre sombre avec en-tête à studs et icône qui déborde ;
@@ -283,12 +283,12 @@ Le style a été **mesuré** sur un vrai jeu (17 ScreenGui, ~7 700 objets), puis
 L'image en haut de page compare l'original (à gauche) et la fenêtre générée par le kit (à droite).
 
 **Installation :**
-- Claude Code : `git clone https://github.com/TemporaryLooker22/glossy-block-ui ~/.claude/skills/glossy-block-ui`.
-- Claude.ai : télécharge `glossy-block-ui.skill` depuis la [dernière release](../../releases/latest) et ajoute-le dans *Paramètres → Capacités → Skills*.
+- Claude Code : `git clone https://github.com/TemporaryLooker22/Stud-UI-Clean-Roblox ~/.claude/skills/stud-ui-clean-roblox`.
+- Claude.ai : télécharge `stud-ui-clean-roblox.skill` depuis la [dernière release](../../releases/latest) et ajoute-le dans *Paramètres → Capacités → Skills*.
 
 **Contenu :**
-- le kit de composants `GlossyUI` ;
-- les animations `GlossyMotion` ;
+- le kit de composants `StudUI` ;
+- les animations `StudMotion` ;
 - 1022 icônes avec un catalogue ;
 - toutes les couleurs, polices et dimensions mesurées ;
 - 7 types d'écrans (boutique, collection, calendrier, rebirth, season pass, offres Robux, popup de récompense) ;

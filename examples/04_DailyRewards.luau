@@ -1,6 +1,6 @@
 --[[
 	Example 04 - Daily Rewards (archetype "grid of colored stud tiles + one hero tile")
-		require(game.ServerStorage.GlossyExamples.DailyRewards)(UI, Icons, game.StarterGui)
+		require(game.ServerStorage.StudExamples.DailyRewards)(UI, Icons, game.StarterGui)
 
 	Anatomy: blue stud header with a calendar icon, yellow "CLAIM ALL" stud button with a Robux badge in the header,
 	3x2 grid of 184x184 stud panels (cyan, cyan, cyan, violet, violet, amber) + a 198x378 rainbow hero tile (rotation 45)

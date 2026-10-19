@@ -1,10 +1,10 @@
 {
-  "name": "glossy-block-ui",
+  "name": "stud-ui-clean-roblox",
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {
-      "GlossyUI": { "$path": "src/GlossyUI.luau" },
-      "GlossyMotion": { "$path": "src/GlossyMotion.luau" },
+      "StudUI": { "$path": "src/StudUI.luau" },
+      "StudMotion": { "$path": "src/StudMotion.luau" },
       "CheckUIIcons": { "$path": "src/CheckUIIcons.luau" }
     }
   }

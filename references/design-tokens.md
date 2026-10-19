@@ -1,7 +1,7 @@
-# Design tokens — Glossy Block UI
+# Design tokens — Stud UI Clean Roblox
 
 Every value here was measured on the reference game (17 ScreenGuis, ~7,700 UI instances).
-`src/GlossyUI.luau` already encodes all of them (`UI.Fonts`, `UI.Colors`, `UI.ButtonThemes`, `UI.Rarities`,
+`src/StudUI.luau` already encodes all of them (`UI.Fonts`, `UI.Colors`, `UI.ButtonThemes`, `UI.Rarities`,
 `UI.HeaderThemes`, `UI.PanelThemes`, `UI.TextGradients`, `UI.ReflectionPresets`). Use the module, and come back
 here when you need to reason about a value or extend the palette.
 

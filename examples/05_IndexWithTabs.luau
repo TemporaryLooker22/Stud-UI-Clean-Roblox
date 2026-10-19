@@ -1,11 +1,11 @@
 --[[
 	Example 05 - Collection Index with rarity tabs (archetype "grid of slots + side tab column")
-		require(game.ServerStorage.GlossyExamples.IndexWithTabs)(UI, Icons, game.StarterGui)
+		require(game.ServerStorage.StudExamples.IndexWithTabs)(UI, Icons, game.StarterGui)
 
 	Anatomy: blue stud header (book icon), dark body with a 4-column grid of 140x126 item slots (gap 12, padding 12),
 	and OUTSIDE the window on the right a column of 150x42 stud tab buttons, one per rarity (Common -> Cosmic),
 	each in its rarity colors. The window is shifted 80px left (Position .5,-80) to balance the tab column.
-	At runtime use GlossyMotion.SelectTab to tint inactive tabs and slide the active one 6px toward the window.
+	At runtime use StudMotion.SelectTab to tint inactive tabs and slide the active one 6px toward the window.
 	Undiscovered slots: icon black (ImageColor3 0,0,0), sunburst transparency 0.8, name "???".
 ]]
 return function(UI, Icons, parent)

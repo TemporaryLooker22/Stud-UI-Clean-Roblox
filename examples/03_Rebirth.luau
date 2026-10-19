@@ -1,6 +1,6 @@
 --[[
 	Example 03 - Rebirth window (archetype "stud-header window with panels")
-		require(game.ServerStorage.GlossyExamples.Rebirth)(UI, Icons, game.StarterGui)
+		require(game.ServerStorage.StudExamples.Rebirth)(UI, Icons, game.StarterGui)
 
 	Anatomy: purple stud header with the rebirth icon overflowing top-left (96px, -10deg), two lime stud panels
 	"current -> next" with an arrow between them, an inset "Requirements" box holding a progress bar,

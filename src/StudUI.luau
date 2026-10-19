@@ -1,20 +1,20 @@
 --!nonstrict
 --[[
-	GlossyUI - Glossy Block UI kit for Roblox (ModuleScript)
+	StudUI - Stud UI Clean Roblox kit for Roblox (ModuleScript)
 	=========================================================
-	Rebuilds, from scratch and without templates, every component of the "Glossy Block" simulator style:
+	Rebuilds, from scratch and without templates, every component of the "Stud UI" simulator style:
 	chunky 3D stud buttons, glossy purchase buttons, stud-header windows, dark glass bodies, product cards,
 	item slots with spinning sunbursts, stud panels, inset boxes, progress bars, pills, badges.
 
 	All measurements are in OFFSET pixels for a 1050 x 620 reference screen. Scale whole roots with a
-	UIScale named "WindowScale" driven by GlossyMotion.BindResponsive (never use Scale sizes for chrome).
+	UIScale named "WindowScale" driven by StudMotion.BindResponsive (never use Scale sizes for chrome).
 
 	Instance names are kept identical to the reference game (French): Fenetre, Entete, Corps, Biseau, Face,
 	Fond, Reflets, LueurBas, LiseréInterne1/2, Ombre, Texte, Icone, ... so runtime scripts written for the
 	reference game (recolor, tabs, disabled state) keep working on generated UI.
 
 	Quick start:
-		local UI = require(path.GlossyUI)
+		local UI = require(path.StudUI)
 		local gui = UI.ScreenGui("MenuShop", 11)
 		local win = UI.Window(gui, { Size = Vector2.new(662, 448), Title = "Nest Shop", Header = "pink",
 			Icon = UI.Assets.Basket })
@@ -379,7 +379,7 @@ function UI.Image(parent, image, p)
 		ImageColor3 = p.Color or WHITE }, parent)
 end
 
---- Spinning-ready sunburst ("Soleil"). Rotate it with GlossyMotion.SpinSunbursts.
+--- Spinning-ready sunburst ("Soleil"). Rotate it with StudMotion.SpinSunbursts.
 function UI.Sunburst(parent, size, p)
 	p = p or {}
 	return UI.Image(parent, UI.Assets.Sunburst, { Name = "Soleil", Size = typeof(size) == "UDim2" and size or UDim2.fromOffset(size, size),
@@ -606,7 +606,7 @@ function UI.RobuxContent(button, price)
 	return c
 end
 
---- Red circular notification badge "!" with a UIScale "Pulse" (animate with GlossyMotion.PulseScale(badge.Pulse)).
+--- Red circular notification badge "!" with a UIScale "Pulse" (animate with StudMotion.PulseScale(badge.Pulse)).
 function UI.NotifBadge(parent, p)
 	p = p or {}
 	local f = new("Frame", { Name = p.Name or "Nouveau", BackgroundColor3 = WHITE, BorderSizePixel = 0, Size = UDim2.fromOffset(28, 28),
@@ -623,7 +623,7 @@ end
 -- =====================================================================================================
 -- 5. CONTAINERS
 -- =====================================================================================================
---- Standard ScreenGui (+ empty "Sons" folder and "Basculer" BindableEvent used by GlossyMotion.Window).
+--- Standard ScreenGui (+ empty "Sons" folder and "Basculer" BindableEvent used by StudMotion.Window).
 function UI.ScreenGui(name, displayOrder, p)
 	p = p or {}
 	local g = new("ScreenGui", { Name = name, ResetOnSpawn = false, IgnoreGuiInset = p.IgnoreGuiInset ~= false,

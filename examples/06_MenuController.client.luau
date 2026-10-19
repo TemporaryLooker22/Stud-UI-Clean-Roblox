@@ -1,7 +1,7 @@
 --[[
 	Example 06 - Runtime controller (LocalScript placed inside a generated menu ScreenGui, e.g. MenuShop)
 	Shows the standard wiring every menu of this style gets at runtime:
-	  * responsive WindowScale + open/close animation, blur, FOV, other GUIs hidden (GlossyMotion.Window)
+	  * responsive WindowScale + open/close animation, blur, FOV, other GUIs hidden (StudMotion.Window)
 	  * sounds folder populated with the reference sound set
 	  * hover / press / release on every 3D button
 	  * spinning sunbursts, swinging header basket, pulsing notification badges
@@ -11,8 +11,8 @@
 	Tested in Play mode: open -> blur 18 / FOV +8 / other GUIs hidden, close -> everything restored.
 ]]
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local UI = require(ReplicatedStorage:WaitForChild("GlossyUI"))
-local Motion = require(ReplicatedStorage:WaitForChild("GlossyMotion"))
+local UI = require(ReplicatedStorage:WaitForChild("StudUI"))
+local Motion = require(ReplicatedStorage:WaitForChild("StudMotion"))
 
 local gui = script.Parent
 local fenetre = gui:WaitForChild("Fenetre")

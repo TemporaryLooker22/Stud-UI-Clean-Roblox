@@ -1,10 +1,10 @@
 ---
-name: glossy-block-ui
-description: Build Roblox game UI in the "Glossy Block" simulator style - chunky 3D stud buttons with bevel lip, gradient face, glass streaks and tiled studs; Heavy Montserrat/Gotham text with tinted outlines and 2px extrusion; translucent dark glass windows with colored stud headers and overflowing tilted icons; dark item slots with spinning sunbursts; rarity ladder Common to Cosmic; bouncy open/close with blur and FOV. Ships a tested Luau component kit (GlossyUI, GlossyMotion), a 1022-icon library (CheckUIIcons), exact design tokens, layouts, example builders and reference screenshots. Use this skill whenever the user wants to create, restyle, extend or fix any Roblox ScreenGui, HUD, menu, shop, inventory, hotbar, daily rewards, rebirth, season pass, index/collection, reward popup or button in this style or "like my game's UI", even if they only say "make a shop menu", "add a button to the HUD" or "UI simulator style" without naming the style.
+name: stud-ui-clean-roblox
+description: Build Roblox game UI in the "Stud UI" simulator style - chunky 3D stud buttons with bevel lip, gradient face, glass streaks and tiled studs; Heavy Montserrat/Gotham text with tinted outlines and 2px extrusion; translucent dark glass windows with colored stud headers and overflowing tilted icons; dark item slots with spinning sunbursts; rarity ladder Common to Cosmic; bouncy open/close with blur and FOV. Ships a tested Luau component kit (StudUI, StudMotion), a 1022-icon library (CheckUIIcons), exact design tokens, layouts, example builders and reference screenshots. Use this skill whenever the user wants to create, restyle, extend or fix any Roblox ScreenGui, HUD, menu, shop, inventory, hotbar, daily rewards, rebirth, season pass, index/collection, reward popup or button in this style or "like my game's UI", even if they only say "make a shop menu", "add a button to the HUD" or "UI simulator style" without naming the style.
 license: MIT
 ---
 
-# Glossy Block UI (Roblox)
+# Stud UI Clean Roblox
 
 A complete, measured design system extracted from a shipped Roblox simulator (17 ScreenGuis, ~7,700 instances) plus a
 **tested component kit** that rebuilds it from scratch. Your job when this skill triggers: produce UI that is
@@ -35,8 +35,8 @@ Look at `assets/screenshots/` first (index in `assets/screenshots/README.md`). S
 ## Files
 | Path | What | When to read |
 |---|---|---|
-| `src/GlossyUI.luau` | Component kit (ModuleScript). Tokens + builders for every component | always use it; read its header comments for parameters |
-| `src/GlossyMotion.luau` | Motion/sound/responsive (client ModuleScript) | when wiring runtime behaviour |
+| `src/StudUI.luau` | Component kit (ModuleScript). Tokens + builders for every component | always use it; read its header comments for parameters |
+| `src/StudMotion.luau` | Motion/sound/responsive (client ModuleScript) | when wiring runtime behaviour |
 | `src/CheckUIIcons.luau` | 1022-icon registry (ModuleScript) | install it; don't read it — use the catalog |
 | `references/icon-catalog.md` | every icon path + id, ★ = used by reference | to pick icons (search by keyword) |
 | `references/design-tokens.md` | fonts, sizes, every color, button themes, rarities, surfaces, strokes, z-index | when choosing or extending colors/sizes |
@@ -52,7 +52,7 @@ Look at `assets/screenshots/` first (index in `assets/screenshots/README.md`). S
 
 1. **Identify the archetype** (layouts-and-archetypes.md §3): product-list shop, collection grid + tabs, reward calendar,
    upgrade/prestige, season pass, premium offers, reward banner, HUD element. Open the matching screenshot and example.
-2. **Install the modules** in the place (once): `GlossyUI`, `GlossyMotion`, `CheckUIIcons` as ModuleScripts in
+2. **Install the modules** in the place (once): `StudUI`, `StudMotion`, `CheckUIIcons` as ModuleScripts in
    `ReplicatedStorage` (or map `src/` with Rojo). If you can't write files into the place, inline the module source in
    your build script.
 3. **Build in Edit mode** into `StarterGui` with a builder function like the examples (`return function(UI, Icons, parent) … end`),
@@ -61,7 +61,7 @@ Look at `assets/screenshots/` first (index in `assets/screenshots/README.md`). S
    `Motion.Window`, `Motion.BindButton`, `Motion.SpinSunbursts`, feedback (`Motion.Float`, `Motion.Shake`).
 5. **Verify visually**: screenshot and compare with the reference capture; walk `references/checklist.md`.
 
-## Kit quick reference (`local UI = require(ReplicatedStorage.GlossyUI)`)
+## Kit quick reference (`local UI = require(ReplicatedStorage.StudUI)`)
 
 ```lua
 local gui = UI.ScreenGui("MenuShop", 11, { Parent = game.StarterGui })      -- + Sons folder + Basculer event
@@ -94,7 +94,7 @@ UI.Recolor(button, "red")   UI.SetButtonText(button, "CLAIMED")   UI.SetDisabled
 Themes: `green red blue yellow purple gray meadow orange close robux cash` (+ French aliases `vert rouge bleu jaune violet gris`)
 and every rarity name. Reflection presets in `UI.ReflectionPresets`; custom stripes with `UI.Stripes{{from,to,alpha},…}`.
 
-Motion (`local Motion = require(ReplicatedStorage.GlossyMotion)`, client only):
+Motion (`local Motion = require(ReplicatedStorage.StudMotion)`, client only):
 `Motion.Window(gui, fenetre)` → `{Open, Close, Toggle}` · `Motion.BindButton(btn, 1.05, gui.Sons)` ·
 `Motion.CreateSounds(gui.Sons)` · `Motion.BindResponsive(uiScale, 0.8)` · `Motion.SpinSunbursts(root)` · `Motion.Sway(img)` ·
 `Motion.PulseScale(badge.Pulse)` · `Motion.PulseStroke(slot.Lisere.Selection)` · `Motion.SelectTab(tabs, active)` ·

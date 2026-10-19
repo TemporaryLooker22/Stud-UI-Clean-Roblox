@@ -1,6 +1,6 @@
 # Motion & sound
 
-All values come from the reference game's LocalScripts and are implemented in `src/GlossyMotion.luau`.
+All values come from the reference game's LocalScripts and are implemented in `src/StudMotion.luau`.
 The feel of this style is: **instant press, springy release, bouncy open, fast close, things always slightly moving.**
 
 ## Buttons (`Motion.BindButton(button, hover, sounds)`)

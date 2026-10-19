@@ -1,7 +1,7 @@
 --[[
 	Example 02 - Full HUD: top navigation bar, left menu (wide button + 2x2 square tiles with notification badge),
 	money counter with "+" button, friend boost line, bottom hotbar of item slots.
-		require(game.ServerStorage.GlossyExamples.Hud)(UI, Icons, game.StarterGui)
+		require(game.ServerStorage.StudExamples.Hud)(UI, Icons, game.StarterGui)
 
 	Layout rules (reference 1050x620, each root has its own WindowScale):
 	  Top bar    : centered, 4px from top, scale 0.8; side buttons 179x65, center (primary) button 276x86.

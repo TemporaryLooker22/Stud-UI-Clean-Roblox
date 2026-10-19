@@ -1,9 +1,9 @@
 --[[
 	Example 01 - Shop window (archetype "Nest Shop")
 	Run once in Edit mode (command bar or MCP execute_luau) to generate the UI into StarterGui:
-		local build = require(game.ServerStorage.GlossyExamples.ShopWindow)
-		build(require(game.ReplicatedStorage.GlossyUI), require(game.ReplicatedStorage.CheckUIIcons), game.StarterGui)
-	Then drive it at runtime with GlossyMotion (see 05_MenuController.client.luau).
+		local build = require(game.ServerStorage.StudExamples.ShopWindow)
+		build(require(game.ReplicatedStorage.StudUI), require(game.ReplicatedStorage.CheckUIIcons), game.StarterGui)
+	Then drive it at runtime with StudMotion (see 06_MenuController.client.luau).
 
 	Anatomy: image header (pink stud texture) + swinging basket + "Restock" chunky orange button + X,
 	timer pill straddling header/body, dark glass body, vertical list of product cards (617x168, gap 9).

@@ -42,7 +42,7 @@ screenshot in `assets/screenshots/` — differences jump out immediately.
 - This style is heavy (≈2 strokes per text, many gradients, 1 CanvasGroup per 3D button). Keep lists virtualised or capped
   (~50 cards), prefer one CanvasGroup per button only, and avoid CanvasGroups larger than the screen.
 - CanvasGroup renders to a texture: never scale a button's UIScale above ~1.2 or it gets blurry.
-- Run idle animations from the single RenderStepped loop in GlossyMotion (it skips destroyed objects).
+- Run idle animations from the single RenderStepped loop in StudMotion (it skips destroyed objects).
 - Mobile: at the 0.52 minimum scale, 12 px slot names become ~6 px — keep slot names ≥ 12 and use TextScaled with MinTextSize if needed.
 
 ## Verification with Roblox Studio MCP (if available)

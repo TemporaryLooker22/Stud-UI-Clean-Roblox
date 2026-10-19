@@ -1,11 +1,11 @@
 --!nonstrict
 --[[
-	GlossyMotion - motion, sound and responsive behaviour of the Glossy Block UI (client ModuleScript)
+	StudMotion - motion, sound and responsive behaviour of the Stud UI Clean Roblox (client ModuleScript)
 	===================================================================================================
 	Every timing below is the exact value used by the reference game. Do not "improve" them: the snappy
 	0.05s press + Back-Out release IS the feel of the style.
 
-		local Motion = require(path.GlossyMotion)
+		local Motion = require(path.StudMotion)
 		Motion.BindResponsive(win.WindowScale)             -- 1050x620 reference, clamp 0.52..1.18
 		Motion.BindButton(button, 1.05, gui.Sons)          -- hover 1.05 / press 0.92 / Back release
 		local menu = Motion.Window(gui, win.Fenetre)       -- open/close with bounce, blur, FOV, hide other GUIs

@@ -1,6 +1,6 @@
 # Components — exact anatomy
 
-Each section gives: what it is, the `GlossyUI` call that builds it, and the instance tree with geometry
+Each section gives: what it is, the `StudUI` call that builds it, and the instance tree with geometry
 (`Size @ Position`, offsets in px, `ap` = AnchorPoint, `z` = ZIndex). Instance names are the reference game's
 French names — keep them, runtime scripts look them up by name.
 
