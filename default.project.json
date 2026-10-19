@@ -1,0 +1,11 @@
+{
+  "name": "glossy-block-ui",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "GlossyUI": { "$path": "src/GlossyUI.luau" },
+      "GlossyMotion": { "$path": "src/GlossyMotion.luau" },
+      "CheckUIIcons": { "$path": "src/CheckUIIcons.luau" }
+    }
+  }
+}

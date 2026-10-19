@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.luau linguist-language=Luau
+*.jpg binary
+*.png binary
