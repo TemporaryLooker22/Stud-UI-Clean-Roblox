@@ -100,7 +100,7 @@ Give the agent this folder and tell it to start with [`SKILL.md`](SKILL.md). Eve
 Works best when the agent can drive Roblox Studio (for example through the **Roblox Studio MCP**) so it can build,
 screenshot and compare. Example prompts:
 
-> *"Create a pet shop menu in my game's glossy block style with 6 pets, Robux and coin prices."*
+> *"Create a pet shop menu in my game's Stud UI style with 6 pets, Robux and coin prices."*
 > *"Add a Settings window with music / sound toggles, same style as the Rebirth menu."*
 > *"Build the HUD: top nav bar with Shop, Play, Trade, and a hotbar of 6 slots."*
 
